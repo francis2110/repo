@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="apponsaresmanagement.controllers.truckDriver.TruckDriverPanelController">
+  <children>
+    <GridPane alignment="CENTER_RIGHT" hgap="5.0" maxWidth="-1.0" prefHeight="400.0" prefWidth="150.0" vgap="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="Nombre:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="nameTxt" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label text="Primer apellido:" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+        <TextField fx:id="firstSurnameTxt" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+        <Label text="Segundo apellido:" GridPane.columnIndex="4" GridPane.rowIndex="0" />
+        <TextField fx:id="secondSurNameTxt" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="0" />
+        <Label text="Matrícula tractora:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField fx:id="truckEnrollmentTxt" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Label text="Matrícula remolque:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+        <TextField fx:id="trailerTxt" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+        <Label text="Dirección:" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+        <TextField fx:id="addressTxt" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+        <Label text="email:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <TextField fx:id="emailTxt" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Label text="Teléfono:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+        <TextField fx:id="phoneTxt" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+        <Label text="NIF:" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+        <TextField fx:id="nifTxt" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+        <HBox prefHeight="46.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+          <children>
+            <VBox prefHeight="200.0" prefWidth="-1.0">
+              <children>
+                <Label text="Entidad:" />
+                <TextField fx:id="entidadTxt" maxWidth="42.0" minWidth="42.0" onKeyReleased="#limitNumberCharacters" prefWidth="42.0" />
+                <Label text="Núm. oficina:" />
+                <TextField fx:id="officeNumb" maxWidth="42.0" minWidth="42.0" onKeyReleased="#limitNumberCharacters" prefWidth="42.0" />
+                <Label text="Digito control:" />
+                <TextField fx:id="controlDigitTxt" maxWidth="30.0" onKeyReleased="#limitNumberCharacters" prefWidth="200.0" />
+                <Label text="Número de cuenta:" />
+                <TextField fx:id="numberAccountTxt" maxWidth="100.0" minWidth="91.0" onKeyReleased="#limitNumberCharacters" prefHeight="-1.0" prefWidth="100.0" />
+              </children>
+            </VBox>
+          </children>
+        </HBox>
+        <Label text="núm. cuenta:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <Text fx:id="validatorTxt" fill="#cc0000" strokeType="OUTSIDE" strokeWidth="0.0" text="" GridPane.columnIndex="3" GridPane.rowIndex="4">
+          <font>
+            <Font size="16.0" />
+          </font>
+        </Text>
+      </children>
+      <columnConstraints>
+        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="16.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="118.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="137.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="194.0" minHeight="10.0" prefHeight="155.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="194.0" minHeight="10.0" prefHeight="156.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+      <stylesheets>
+        <URL value="@../../../truckdriverpanel.css" />
+      </stylesheets>
+    </GridPane>
+  </children>
+  <stylesheets>
+    <URL value="@truckdriverpanel.css" />
+  </stylesheets>
+</AnchorPane>

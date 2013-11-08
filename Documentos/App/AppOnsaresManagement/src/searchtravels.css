@@ -1,0 +1,83 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.button {
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+.menu-item .label {
+    -fx-font-family:"Calibri";
+    -fx-font-size:16px;
+}
+.label{
+    -fx-font-weight:bold;
+    -fx-font-family: "Apple Garamond";
+    -fx-font-size: 16px;
+}
+#paymentOKLbl{  -fx-background-color:darkseagreen ;}
+.paymentOK{
+    -fx-background-color: darkseagreen;
+    -fx-border-color: gray;
+    -fx-border-width: 1 1 0 0;
+}
+#colorOKLbl{
+     -fx-background-color: darkseagreen;    
+      -fx-border-color: gray;
+    -fx-border-width: 1 1 0 0;
+}
+.clientpaymentDelay{
+    -fx-border-color: gray;
+    -fx-border-width: 1 1 0 0;
+    -fx-background-color: red   ;
+}
+#clientDelayColorLbl{
+      -fx-background-color: red   ;
+    }
+.travelnotpaidtoDriver{
+    -fx-border-color: gray;
+    -fx-border-width: 1 1 0 0;
+    -fx-background-color: darksalmon; 
+}
+#driverDelayColorLbl{
+    -fx-background-color: darksalmon; 
+}
+.registeredTravel{
+    -fx-border-color: gray;
+    -fx-border-width: 1 1 0 0;
+    -fx-background-color: aquamarine;
+}
+#registeredColorLbl{
+    -fx-background-color: aquamarine;
+}
+.notregisteredTravel{
+    -fx-border-color: gray;
+    -fx-border-width: 1 1 0 0;
+    -fx-background-color: khaki;}
+#notRegisteredColorLbl{
+    -fx-background-color: khaki;
+}
+.treasuryState{
+    -fx-border-color: gray;
+    -fx-border-width: 1 1 0 0;
+    -fx-background-color:yellowgreen }
+#treasuryStateColorLbl{
+    -fx-background-color:yellowgreen;
+}
+
+#titleLbl{
+    -fx-font-weight:bold;
+    -fx-font-family: "Comic Sans MS";
+    -fx-font-size: 18px;
+}
+#splitPane{-fx-background-image: url("background.jpg");}
+#travelsTv{
+    -fx-font: normal;
+}
+
+#clientDelayLbl,#paymentToDriverDelayLbl, #closedTravelLbl, #registeredTravelLbl,#notRegisteredTravelLbl#treasuryStateLbl{ -fx-font: normal;
+                                                                                                                           -fx-font-weight:normal;
+                                                                                                                           -fx-font-size:15px;
+}

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml" fx:controller="apponsaresmanagement.controllers.AuxStageController">
+  <children>
+    <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <center>
+        <VBox alignment="CENTER" prefHeight="189.0" prefWidth="600.0">
+          <children>
+            <Label fx:id="contentLbl" alignment="CENTER" contentDisplay="CENTER" prefHeight="47.0" prefWidth="502.0" text="Los datos del transportista han sido guardados correctamente. Si desea introducir los datos de un nuevo transportista repita   la operación." textAlignment="JUSTIFY" wrapText="true" />
+            <Button fx:id="acceptBtn" mnemonicParsing="false" onAction="#closeStage" text="Aceptar" />
+          </children>
+        </VBox>
+      </center>
+      <top>
+        <Text fx:id="titleTxt" fill="#1000cc" strokeType="OUTSIDE" strokeWidth="0.0" text="Transportista insertado correctamente." BorderPane.alignment="CENTER">
+          <font>
+            <Font size="18.0" />
+          </font>
+        </Text>
+      </top>
+    </BorderPane>
+  </children>
+  <stylesheets>
+    <URL value="@../../../Login.css" />
+  </stylesheets>
+</AnchorPane>

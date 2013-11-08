@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="362.0" prefWidth="427.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children>
+    <AnchorPane fx:id="anchorPane" prefHeight="362.0" prefWidth="427.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <BorderPane prefHeight="362.0" prefWidth="427.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+          <center>
+            <Label prefHeight="77.0" prefWidth="313.0" text="Su cliente ha sido editado correctamente. Si desea editar otro cliente repita el proceso a través del menú." textAlignment="JUSTIFY" wrapText="true" BorderPane.alignment="TOP_CENTER">
+              <font>
+                <Font name="Calibri" size="16.0" />
+              </font>
+            </Label>
+          </center>
+          <top>
+            <Text fill="#001899" strokeType="OUTSIDE" strokeWidth="0.0" text="Cliente editado correctamente." BorderPane.alignment="CENTER">
+              <font>
+                <Font name="Calibri Bold" size="18.0" />
+              </font>
+            </Text>
+          </top>
+        </BorderPane>
+      </children>
+    </AnchorPane>
+  </children>
+  <stylesheets>
+    <URL value="@../../../insertclientok.css" />
+  </stylesheets>
+</AnchorPane>

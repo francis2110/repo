@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?language javascript?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="apponsaresmanagement.controllers.ClientPanelController">
+  <children>
+    <GridPane fx:id="gridPane" alignment="BASELINE_RIGHT" hgap="4.0" prefHeight="400.0" prefWidth="600.0" vgap="3.0" AnchorPane.bottomAnchor="-1.5" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="1.5">
+      <children>
+        <Label prefWidth="85.0" text="Nombre:" wrapText="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
+          <font>
+            <Font size="16.0" fx:id="x1" />
+          </font>
+          <stylesheets>
+            <URL value="@../../newclient.css" />
+          </stylesheets>
+          <textFill>
+            <Color blue="0.161" green="0.161" red="0.161" fx:id="x2" />
+          </textFill>
+        </Label>
+        <TextField fx:id="nameTxt" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="0" />
+        <Label font="$x1" text="CIF/NIF:" textFill="$x2" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="0" />
+        <Label font="$x1" text="Núm. móvil:" textFill="$x2" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="0">
+          <stylesheets>
+            <URL value="@../../newclient.css" />
+          </stylesheets>
+        </Label>
+        <Label font="$x1" prefWidth="106.0" text="Núm. télf. fijo:" textFill="$x2" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" />
+        <Label font="$x1" prefWidth="54.0" text="Calle:" textFill="$x2" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+          <stylesheets>
+            <URL value="@../../newclient.css" />
+          </stylesheets>
+        </Label>
+        <Label font="$x1" prefWidth="71.0" text="Número:" textAlignment="RIGHT" textFill="$x2" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+        <Label font="$x1" prefHeight="23.0" prefWidth="85.0" text="Población:" textFill="$x2" wrapText="true" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="2">
+          <stylesheets>
+            <URL value="@../../newclient.css" />
+          </stylesheets>
+        </Label>
+        <TextField fx:id="clientIdTxt" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+        <TextField fx:id="numMovTxt" prefWidth="200.0" GridPane.columnIndex="5" GridPane.halignment="LEFT" GridPane.rowIndex="0" />
+        <TextField fx:id="numFijoTxt" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" />
+        <TextField fx:id="streetTxt" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" />
+        <TextField fx:id="numberTxt" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+        <TextField fx:id="townTxt" prefWidth="200.0" GridPane.columnIndex="5" GridPane.halignment="LEFT" GridPane.rowIndex="2" />
+        <Label text="Provincia:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <TextField fx:id="provTxt" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <TextField fx:id="cpTxt" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+        <Label font="$x1" prefWidth="61.0" text="Email:" textFill="$x2" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+          <stylesheets>
+            <URL value="@../../newclient.css" />
+          </stylesheets>
+        </Label>
+        <TextField fx:id="emailTxt" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+        <Label font="$x1" prefWidth="75.0" text="Contacto:" textFill="$x2" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+          <stylesheets>
+            <URL value="@../../newclient.css" />
+          </stylesheets>
+        </Label>
+        <TextField fx:id="contactTxt" prefWidth="91.0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+        <Label text="C.P.:" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+        <Text fx:id="validator" fill="#cc0000" font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+        <CheckBox fx:id="dispatcherCbx" mnemonicParsing="false" text="Despachante" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+          <font>
+            <Font name="Comic Sans MS Bold" size="16.0" />
+          </font>
+        </CheckBox>
+      </children>
+      <columnConstraints>
+        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      </columnConstraints>
+      <padding>
+        <Insets left="15.0" right="15.0" />
+      </padding>
+      <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+  </children>
+  <stylesheets>
+    <URL value="@../../../newclient.css" />
+  </stylesheets>
+</AnchorPane>

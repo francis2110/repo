@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="200.0" maxWidth="700.0" minHeight="200.0" minWidth="700.0" prefHeight="200.0" prefWidth="700.0" xmlns:fx="http://javafx.com/fxml" fx:controller="apponsaresmanagement.controllers.travels.TravelColumnsVisibilityController">
+  <children>
+    <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <center>
+        <GridPane fx:id="gridPane">
+          <children>
+            <CheckBox fx:id="travelDateckb" mnemonicParsing="false" text="fecha de viaje" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <CheckBox fx:id="clientPaymentckb" mnemonicParsing="false" text="Ingreso" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <CheckBox fx:id="driverPaymentCkb" mnemonicParsing="false" text="Salario transportista" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+            <CheckBox fx:id="distanceCkb" mnemonicParsing="false" text="kms" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+            <CheckBox fx:id="containerNumberCkb" mnemonicParsing="false" text="Numero de contenedor." GridPane.columnIndex="4" GridPane.rowIndex="0" />
+            <CheckBox fx:id="sealCkb" mnemonicParsing="false" text="Precinto" GridPane.columnIndex="5" GridPane.rowIndex="0" />
+            <CheckBox fx:id="containerTypeCkb" mnemonicParsing="false" text="Tipo de contenedor" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <CheckBox fx:id="packageCkb" mnemonicParsing="false" text="Bultos" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <CheckBox fx:id="commodityCkb" mnemonicParsing="false" text="Mercancia" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <CheckBox fx:id="weightCkb" mnemonicParsing="false" text="Peso" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <CheckBox fx:id="originCkb" mnemonicParsing="false" text="Origen" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <CheckBox fx:id="destinationCkb" mnemonicParsing="false" text="Destino" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <CheckBox fx:id="travelTypeCkb" mnemonicParsing="false" text="Tipo de viaje" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <CheckBox fx:id="collectionPlaceCkb" mnemonicParsing="false" text="Lugar de recogida" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <CheckBox fx:id="loadPlaceCkb" mnemonicParsing="false" text="Lugar de carga" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <CheckBox fx:id="carrierCkb" mnemonicParsing="false" text="Cargador" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <CheckBox fx:id="arriveHourCkb" mnemonicParsing="false" text="Hora de llegada" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <CheckBox fx:id="exitHourCkb" mnemonicParsing="false" text="Hora de salida" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+            <CheckBox fx:id="deliveryPlaceCkb" mnemonicParsing="false" text="Lugar de entrega." GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <CheckBox fx:id="paymentTypeCkb" mnemonicParsing="false" text="Tipo de pago" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <CheckBox fx:id="ivaCkb" mnemonicParsing="false" text="Iva" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <CheckBox fx:id="treasuryStateCkb" mnemonicParsing="false" text="Estado hacienda" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <CheckBox fx:id="clientPaymentStateCkb" mnemonicParsing="false" text="Pago cliente" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <CheckBox fx:id="driverPaymentStateCkb" mnemonicParsing="false" text="Pago a transportista" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+            <CheckBox fx:id="clientCkb" mnemonicParsing="false" text="Cliente" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+            <CheckBox fx:id="driverCkb" mnemonicParsing="false" text="Transportista" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <CheckBox fx:id="othersCkb" mnemonicParsing="false" text="Otros gastos" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+            <CheckBox fx:id="customCkb" mnemonicParsing="false" text="Despacho de aduanas" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <CheckBox fx:id="shippingExpensesCkb" mnemonicParsing="false" text="Gastos de naviera" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <CheckBox fx:id="shippingCkb" mnemonicParsing="false" text="Naviera" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <CheckBox fx:id="boatCkb" mnemonicParsing="false" text="Buque" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+            <CheckBox fx:id="dispatcherCkb" mnemonicParsing="false" text="Despachante" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Button fx:id="acceptBtn" mnemonicParsing="false" onAction="#setVisibilityforColumns" text="Aceptar" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <CheckBox id="reference" fx:id="referenceCkb" mnemonicParsing="false" text="Referencia" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <CheckBox id="providedHour" fx:id="providedHourCkb" mnemonicParsing="false" text="Hora prevista" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+          </children>
+          <columnConstraints>
+            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          </rowConstraints>
+        </GridPane>
+      </center>
+      <padding>
+        <Insets left="2.0" />
+      </padding>
+      <top>
+        <Label text="Seleccione las campos de viaje que desea ver:" BorderPane.alignment="CENTER">
+          <font>
+            <Font name="System Bold" size="13.0" />
+          </font>
+        </Label>
+      </top>
+    </BorderPane>
+  </children>
+  <stylesheets>
+    <URL value="@../../../appbase.css" />
+  </stylesheets>
+</AnchorPane>

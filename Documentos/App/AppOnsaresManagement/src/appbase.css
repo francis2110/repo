@@ -1,0 +1,8 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+root { 
+    display: block;
+}
+#anchorPane{-fx-background-image: url("background.jpg");}

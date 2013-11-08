@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" xmlns="http://javafx.com/javafx/2.2" fx:controller="apponsaresmanagement.controllers.truckDriver.SeeTruckDriverController">
+  <children>
+    <BorderPane fx:id="borderPane" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <top>
+        <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+          <children>
+            <Label text="Escriba el nombre de transportista que quiere buscar:" />
+            <TextField fx:id="truckDriverTxt" prefWidth="200.0" />
+            <Button fx:id="searchDriverBtn" mnemonicParsing="false" onAction="#searchDriver" prefHeight="21.999908447265625" text="Buscar" />
+            <Text fx:id="validatorTxt" strokeType="OUTSIDE" strokeWidth="0.0" text="" />
+          </children>
+        </HBox>
+      </top>
+    </BorderPane>
+  </children>
+  <stylesheets>
+    <URL value="@seetruckdriver.css" />
+  </stylesheets>
+</AnchorPane>

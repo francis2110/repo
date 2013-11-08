@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="apponsaresmanagement.controllers.EditClientController">
+  <children>
+    <BorderPane fx:id="borderPane" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <center>
+        <GridPane>
+          <children>
+            <Label text="Nombre:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <Label text="CIF/NIF:" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+            <Label text="Núm. móvil:" GridPane.columnIndex="4" GridPane.rowIndex="0" />
+            <Label text="Núm. télf. fijo:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <Label text="Email:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label text="Contacto:" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Label text="Calle:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <Label text="Número:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label text="Población:" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <Label text="Provincia:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <Label text="C.P.:" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+          </children>
+          <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          </rowConstraints>
+        </GridPane>
+      </center>
+      <stylesheets>
+        <URL value="@../../editclient.css" />
+      </stylesheets>
+      <top>
+        <GridPane fx:id="gridPane">
+          <children>
+            <Label prefWidth="265.0" text="Seleccione el nombre del cliente que quiere modificar:" GridPane.columnIndex="0" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="0">
+              <font>
+                <Font size="16.0" />
+              </font>
+            </Label>
+            <ComboBox fx:id="clientsCbx" prefHeight="21.0" prefWidth="223.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+              <items>
+                <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Item 1" />
+                  <String fx:value="Item 2" />
+                  <String fx:value="Item 3" />
+                </FXCollections>
+              </items>
+            </ComboBox>
+          </children>
+          <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="339.0" minWidth="10.0" prefWidth="302.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="356.0" minWidth="10.0" prefWidth="298.0" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          </rowConstraints>
+        </GridPane>
+      </top>
+    </BorderPane>
+  </children>
+  <stylesheets>
+    <URL value="@../../../editclient.css" />
+  </stylesheets>
+</AnchorPane>
