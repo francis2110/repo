@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.web.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="434.0" prefWidth="770.0" xmlns:fx="http://javafx.com/fxml" fx:controller="maps.Controller.mapsController">
+  <children>
+    <VBox alignment="TOP_CENTER" layoutX="0.0" layoutY="0.0" prefHeight="434.0" prefWidth="243.0" spacing="3.0">
+      <children>
+        <ToggleButton fx:id="roadBtn" mnemonicParsing="false" prefWidth="76.0" text="Road">
+          <toggleGroup>
+            <ToggleGroup fx:id="mapTypeTg" />
+          </toggleGroup>
+        </ToggleButton>
+        <ToggleButton fx:id="satelliteBtn" mnemonicParsing="false" text="Satellite" toggleGroup="$mapTypeTg" />
+        <ToggleButton fx:id="hyBridBtn" mnemonicParsing="false" prefWidth="76.0" text="Hybrid" toggleGroup="$mapTypeTg" />
+        <ToggleButton fx:id="terrainBtn" mnemonicParsing="false" prefWidth="76.0" text="Terrain" toggleGroup="$mapTypeTg" />
+        <HBox alignment="CENTER_LEFT" prefHeight="32.0" prefWidth="157.0" spacing="4.0" VBox.margin="$x1">
+          <children>
+            <Label prefHeight="21.0" prefWidth="67.0" text="Location:" />
+            <TextField fx:id="locationTxt" prefWidth="154.0" />
+          </children>
+          <padding>
+            <Insets left="4.0" fx:id="x1" />
+          </padding>
+        </HBox>
+        <HBox alignment="CENTER" padding="$x1" prefHeight="32.0" prefWidth="243.0" spacing="4.0">
+          <children>
+            <Button fx:id="zoomInBtn" mnemonicParsing="false" text="Zoom in" />
+            <Button fx:id="zoomOutBtn" mnemonicParsing="false" text="Zoom out" />
+          </children>
+        </HBox>
+      </children>
+      <padding>
+        <Insets top="4.0" />
+      </padding>
+    </VBox>
+    <WebView fx:id="mapsWV" prefHeight="434.0" prefWidth="513.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="257.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+  </children>
+  <stylesheets>
+    <URL value="@../../css/WebMap.css" />
+  </stylesheets>
+</AnchorPane>
