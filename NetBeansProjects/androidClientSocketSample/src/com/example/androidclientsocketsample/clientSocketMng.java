@@ -15,6 +15,8 @@ import android.util.Log;
 public class clientSocketMng extends AsyncTask<String, Void, String> {
 	private Socket socket = null;
 	private static final int serverPort = 1234;
+	//be careful with the ip number. 
+	//You must find out yours and put in the field serverIP
 	private static final String serverIP = "192.168.1.128";
 	private BufferedReader in;
 	private PrintWriter out;
