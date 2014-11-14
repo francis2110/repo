@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">LedsONOFFWifi</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="connectionAction">Start</string>
+    <string name="blueON" >Blue Led ON</string>
+   <string name="blueOFF">Blue Led OFF</string>
+   <string name="redON">Red Led ON</string>
+   <string name="redOFF">Red Led OFF</string>
+
+</resources>
