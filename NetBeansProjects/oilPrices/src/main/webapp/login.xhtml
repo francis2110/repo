@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ezcomp="http://xmlns.jcp.org/jsf/composite/ezcomp"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <body>
+
+        <ui:composition template="./index.xhtml">
+
+            <ui:define name="menu">
+                <h:form>
+                    <ezcomp:basicMenu/>
+                </h:form>
+            </ui:define>
+
+            <ui:define name="title of page">
+                <h3>Login de usuario:</h3>
+            </ui:define>
+
+            <ui:define name="content">
+                <h:form  style="font-size: 0.8em">
+                    <p:panelGrid columns="2">
+                        <p:outputLabel value="usuario:*" for="userTxt" />
+                        <p:inputText id="userTxt" value="#{loginBean.userId}"/>
+                        <p:outputLabel value="Password:*" for="passwordTxt"/>
+                        <p:password id="passwordTxt" value="#{loginBean.passwordTxt}"/>
+                        <p:commandButton value="Login" action="#{loginBean.loginUser()}"/>
+                    </p:panelGrid>
+                </h:form>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

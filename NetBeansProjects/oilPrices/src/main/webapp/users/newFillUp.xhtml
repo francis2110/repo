@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:ezcomp="http://xmlns.jcp.org/jsf/composite/ezcomp"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <body>
+
+        <ui:composition template="./../index.xhtml">
+
+            <ui:define name="menu">
+                <h:form>
+                    <ezcomp:userMenu />
+                </h:form>
+            </ui:define>
+
+            <ui:define name="title of page">
+                <h3>Nuevo repostaje.</h3>
+            </ui:define>
+
+            <ui:define name="content">
+                <h:form id="form"  style="font-size: 0.8em">
+                    <p:panelGrid id="fillUpDataPnl" columns="6">
+                        <p:outputLabel for="carCb " value="Coche:"/>
+                        <p:selectOneMenu id="carCb" value="#{fillUpBean.car}" validator="#{fillUpBean.utils.verifyCar}">
+                            <f:selectItems value="#{fillUpBean.carsLstCb}"/>
+                        </p:selectOneMenu>
+                        <p:message id="carCbMssg" for="carCb"/>
+
+                        <p:outputLabel  for="distanceTxt" value="km.:" />
+                        <p:inputText id="distanceTxt" value="#{fillUpBean.km}" validator="#{fillUpBean.utils.verifyKilometers}">
+                            <p:ajax event="blur" update="distanceMssg"/>
+                        </p:inputText>
+                        <p:message id="distanceMssg" for="distanceTxt" />
+
+                        <p:outputLabel for="optionRBttn"  value="Modo:"/>
+                        <p:selectOneRadio id="optionRBttn" value="#{fillUpBean.mode}"   style="border: dotted; border-width: thin">
+                            <f:selectItem itemLabel="Precio combustible" itemValue="price"/>
+                            <f:selectItem itemLabel="Gasolinera" itemValue="oilStationDate"/>
+                            <p:ajax update=":form:pricePnl :form:oilStationPnl" event="valueChange" listener="#{fillUpBean.modeSelection()}"/>
+                        </p:selectOneRadio>
+                        <p:message for="optionRBttn"/>
+
+                        <p:outputLabel value="tipo de combustible:*" for="oilTypeCb"/>
+                        <p:selectOneMenu id="oilTypeCb" value="#{fillUpBean.fuelType}"  validator="#{fillUpBean.utils.verifyOilSelection}" >
+                            <f:selectItems value="#{fillUpBean.productsListCb}"/>
+                        </p:selectOneMenu>
+                        <p:message id="productCbMssg" for="oilTypeCb"/>
+
+                        <p:outputLabel for="dateTxt" value="fecha:"/>
+                        <p:calendar id="dateTxt" value="#{fillUpBean.fillUpDate}" validator="#{fillUpBean.utils.verityDate}"><p:ajax event="blur" update="dateTxtMssg"/></p:calendar>
+                        <p:message for="dateTxt" id="dateTxtMssg"/>
+                        <p:outputLabel value="Total repostaje (€): "/>
+                        <p:inputText id="fillUpTotalTxt"  value="#{fillUpBean.bill}"  validator="#{fillUpBean.verifyPrice}"><p:ajax event="blur" update="fillUpTotalMssg"/></p:inputText>
+                        <p:message id="fillUpTotalMssg" for="fillUpTotalTxt"/>
+
+                    </p:panelGrid>
+
+                    <p:panel id="pricePnl" visible="#{fillUpBean.pricePnlVisibility}" style="width: 60%"  >
+                        <p:panelGrid  columns="6" >
+                            <p:outputLabel value="Precio litro:"/>
+                            <p:inputText id="priceTxt"  value="#{fillUpBean.literPrice}"  validator="#{fillUpBean.verifyPrice}"><p:ajax event="blur" update="priceMssg"/></p:inputText>
+                            <p:message id="priceMssg" for="priceTxt"/>
+
+                        </p:panelGrid>
+                    </p:panel>
+                    <p:panel id="oilStationPnl" visible="#{fillUpBean.oilStationPnlVisibility}">
+                        <h:panelGrid    columns="8"  style="width: 60%" cellpadding="5">
+                            <p:outputLabel for="address" value="Dirección:" />
+                            <p:inputText id="address" value="#{fillUpBean.adress}" validator="#{fillUpBean.verifyAdress}" >
+                                <p:ajax event="blur" update="addressMsg"/>
+                            </p:inputText>
+                            <p:message id="addressMsg"  for ="address"/>
+                            <p:outputLabel for="searchRadius" value="Radio de búsqueda:"/>
+                            <p:inputText id="searchRadius" value="#{fillUpBean.radius}" validator="#{fillUpBean.verifyRadius}" >
+                                <p:ajax event="blur" update="radiusMssg"/>
+                            </p:inputText>
+                            <p:message id="radiusMssg"  for="searchRadius"/>
+                            <p:commandButton value="Geocode" icon="fa fa-search" action="#{fillUpBean.drivingDistance()}"  update=":form:fillUpDataPnl :form:singleDT :form:oilStationPnl"  />
+                        </h:panelGrid>
+                    </p:panel>
+                    <p:commandButton id="fillUpBttn" action="#{fillUpBean.saveFillUP()}"  value="Grabar"/>
+
+
+
+                    <p:panel id="singleDT" visible="#{fillUpBean.placesVisibility}" >
+                        <p:dataTable var="places"  style="font-size: 0.8em" value="#{fillUpBean.possibleOilStation}"  selectionMode="single" selection="#{fillUpBean.oilStationSelected}" rowKey="#{places.oilStation.direccion}">
+                            <f:facet name="header">
+                                <p:outputLabel value="Gasolineras próximas"/>
+                            </f:facet>
+                            <p:column headerText="Dirección">
+                                <h:outputText value="#{places.oilStation.direccion}"  />
+                            </p:column>
+                            <p:column headerText="Grupo">
+                                <h:outputText value="#{places.oilStation.rotulo}"/>
+                            </p:column>
+                            <p:column headerText="Distancia (kms.)" sortBy="#{places.distance}" >
+                                <h:outputText value="#{places.distance}">
+                                    <f:convertNumber pattern="#0.000"/>
+                                </h:outputText>
+                            </p:column>
+
+                            <p:column headerText="gasolina 95 (€)"  rendered="#{fillUpBean.gasolina95Rendered}" sortBy="#{places.gasolinaPrice}">
+                                <h:outputText value="#{places.gasolinaPrice}"/>
+                            </p:column>
+                            <p:column headerText="gasoil (€)" sortBy="#{places.gasoilPrice}" rendered="#{fillUpBean.gasoleoARendered}">
+                                <h:outputText value="#{places.gasoilPrice}"/>
+                            </p:column>
+                            <p:column headerText="nuevo gasoil (€)" sortBy="#{places.gasoilAPrice}" rendered="#{fillUpBean.nuevoGasoleoRendered}">
+                                <h:outputText value=" #{places.gasoilAPrice}"/>
+                            </p:column>
+                            <p:column headerText="gasolina 98 (€)" sortBy="#{places.gasolina98Price }" rendered="#{fillUpBean.gasolina98Rendered}"> 
+                                <h:outputText value="#{places.gasolina98Price}"/>
+                            </p:column>
+                        </p:dataTable>
+                    </p:panel>
+                </h:form>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

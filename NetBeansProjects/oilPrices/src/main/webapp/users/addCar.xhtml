@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ezcomp="http://xmlns.jcp.org/jsf/composite/ezcomp"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <body>
+
+        <ui:composition template="./../index.xhtml">
+
+            <ui:define name="menu">
+                <h:form>
+                    <ezcomp:userMenu/>
+                </h:form>
+            </ui:define>
+
+            <ui:define name="title of page">
+                <h3>Introduzca un nuevo coche</h3>
+            </ui:define>
+
+            <ui:define name="content">
+                <h:form id="newCarForm">
+                    <p class="paragraphStyle">
+                        <p:growl id="growl" showDetail="true"/>
+                        <p:outputLabel class="paragraphStyle">
+                            Puede añadir un coche para sacar posteriormente sus consumos en el siguiente formulario. Simplemente rellene los campos que aparecen a continuación. 
+                        </p:outputLabel>
+                    </p>
+                    <p:panelGrid id="carData" columns="6"  style="font-size: 0.8em">
+
+                        <p:outputLabel value="modelo de coche:*" for="carModelTxt" />
+                        <p:inputText id="carModelTxt" value="#{addUserCarsBean.carModel}" validator="#{addUserCarsBean.verifyCarModel}">
+                            <p:ajax event="blur"  update="carModelMssg"/>
+                        </p:inputText>
+                        <p:message id="carModelMssg" for="carModelTxt"/>
+
+                        <p:outputLabel value="tipo de combustible:*" for="oilTypeCb"/>
+                        <p:selectOneMenu id="oilTypeCb" value="#{addUserCarsBean.fuelType}"  validator="#{addUserCarsBean.verifyOilSelection}" >
+                            <f:selectItems value="#{addUserCarsBean.productsListCb}"/>
+                        </p:selectOneMenu>
+                        <p:message id="productCbMssg" for="oilTypeCb"/>
+
+                        <p:outputLabel value="fecha de fabricacion:" for="manufacturingDate"/>
+                        <p:calendar id="manufacturingDate" value="#{addUserCarsBean.manufacturingDate}" validator="#{addUserCarsBean.verifyManufacturingDate}" showOn="button">
+                            <p:ajax event="blur" update="manufacturingDateMssg"/>
+                        </p:calendar>
+                        <p:message id="manufacturingDateMssg" for="manufacturingDate"/>
+
+                        <p:outputLabel value="matrícula: " for="numberPlateTxt"/>
+                        <p:inputText id="numberPlateTxt" value="#{addUserCarsBean.numberPlate}" validator="#{addUserCarsBean.verityNumberPlate}">
+                            <p:ajax event="blur" update="numberPlateMssg"/>
+                        </p:inputText>
+                        <p:message id="numberPlateMssg" for="numberPlateTxt"/>
+
+                        <p:commandButton  id="createBttn" value="Grabar" actionListener="#{addUserCarsBean.createCar}"  update=":newCarForm:growl :newCarForm:carData" />
+                                                 
+                    </p:panelGrid>
+                </h:form>
+
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

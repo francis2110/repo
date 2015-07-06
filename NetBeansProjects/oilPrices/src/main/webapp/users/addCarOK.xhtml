@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:ezcomp="http://xmlns.jcp.org/jsf/composite/ezcomp"
+      xmlns:p="http://primefaces.org/ui">
+
+    <body>
+
+        <ui:composition template="./../index.xhtml">
+
+            <ui:define name="menu">
+                <ezcomp:userMenu/>
+            </ui:define>
+
+            <ui:define name="title of page">
+                <h3>Coche añadido</h3>
+            </ui:define>
+
+            <ui:define name="content">
+                <p class="sangria">
+                    <p:outputPanel style="font-size: 0.8em"> 
+                            Su coche ha sido añadido correctamente.
+                    </p:outputPanel>
+                </p>
+
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

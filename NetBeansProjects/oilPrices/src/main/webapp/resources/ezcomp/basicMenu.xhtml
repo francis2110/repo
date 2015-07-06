@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:cc="http://xmlns.jcp.org/jsf/composite"
+      xmlns:p="http://primefaces.org/ui">
+
+    <!-- INTERFACE -->
+    <cc:interface>
+    </cc:interface>
+
+    <!-- IMPLEMENTATION -->
+    <cc:implementation>
+        <p:menubar class="fontSelection">
+            <p:menuitem value="Localizador" icon="fa fa-search" ></p:menuitem>
+            <p:submenu label="Inicio">
+                <p:menuitem value="Sign-in"  icon="fa fa-sign-in" action="#{navigationBean.gotoLoginPage()}"/>
+                <p:menuitem value="Registrarse" icon="fa fa-pencil" action="#{navigationBean.gotoRegisterPage()}"/>
+                <p:separator/>
+                <p:menuitem value="Intro" icon="fa fa-users" action="#{navigationBean.gotoInitPage()}"/>
+                <p:menuitem value="Reset" action="#{navigationBean.goReset()}"/>
+            </p:submenu>
+
+        </p:menubar>
+    </cc:implementation>
+</html>

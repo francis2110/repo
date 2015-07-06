@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ez="http://xmlns.jcp.org/jsf/composite/ezcomp"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <body>
+
+        <ui:composition template="./../index.xhtml">
+
+            <ui:define name="menu">
+                <h:form class="fontSelection">
+                    <ez:userMenu/>
+                </h:form>
+            </ui:define>
+
+            <ui:define name="title of page">
+                <h3>Bienvenido</h3>
+            </ui:define>
+
+            <ui:define name="content">
+                <h:form style="font-size: 0.8em" class="fontSelection">
+                    <p class="sangria">
+                        <p:outputLabel class="paragraphStyle">
+                            Recuerde que puede visualizar estadísticas de sus repostajes navengando por el menú de usuario. 
+                        </p:outputLabel>
+                    </p>
+                </h:form>
+
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>
