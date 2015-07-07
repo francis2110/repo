@@ -22,6 +22,7 @@ import javax.enterprise.context.RequestScoped;
 import javax.faces.context.FacesContext;
 import javax.faces.model.SelectItem;
 import javax.inject.Inject;
+import org.primefaces.model.chart.LineChartModel;
 
 /**
  *
@@ -38,6 +39,7 @@ public class consumptionsBean {
     private ConsumptionTbl cTblBean;
    private List<ConsumptionTbl> carsTblLst;
     private boolean tableVisibility;
+    private LineChartModel consumptionsLine;
     @Inject
     UsersFacade usersEjb;
     @Inject
@@ -136,6 +138,14 @@ public class consumptionsBean {
 
     public void setCarsEjb(CarsFacade carsEjb) {
         this.carsEjb = carsEjb;
+    }
+
+    public LineChartModel getConsumptionsLine() {
+        return consumptionsLine;
+    }
+
+    public void setConsumptionsLine(LineChartModel consumptionsLine) {
+        this.consumptionsLine = consumptionsLine;
     }
 
     public void viewCarConsumption() {
