@@ -1,0 +1,46 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 24-feb-2015, 14:22:25
+    Author     : fran
+*/
+*{
+    font-family: Calibri !important;
+}
+#map-canvas{
+    width:80%;
+    height: 500px;
+    margin-left: 10%;
+}
+.ui-menu{
+    font-size: 0.8em !important;
+}
+.sangria{
+    text-indent: 8px;
+}
+.ui-layout-north {
+    z-index:20 !important;
+    overflow:visible !important;;
+}
+.ui-layout-north .ui-layout-unit-content {
+    overflow:visible !important;
+}
+
+.paragraphStyle{
+    font-size: 14px ;
+}
+.ui-icon{
+    text-indent: 0px !important;
+}
+.tableStyle{
+    font-size: 0.8em;
+}
+.fontSelection{font-family: Calibri !important}
+#pricesTbStyle.ui-widget-content, tr, td {
+    border: none !important;
+}
+
+
