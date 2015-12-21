@@ -1,0 +1,61 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 05-oct-2015, 10:48:17
+    Author     : fran
+*/
+*{
+    font-family: Calibri !important;
+}
+.layoutnoBorders{
+    border: 0;
+
+
+}
+
+.blindPanel{
+    width: 100%;
+    border: 1px !important;
+    height: 150px;
+    min-width: 600px;
+
+}
+.blindPanelColumn{
+    width:33.3%;    
+    alignment-adjust: central
+}
+.temperaturePanelColumn{
+    width:20%;    
+    alignment-adjust: central
+}
+.lightsPanelColumn{
+    width:50%;
+    alignment-adjust: central;
+}
+.buttonArrow{
+    position:relative;
+    margin: 0 auto;
+    width:60%; 
+    height: 12%;
+
+
+}
+.panelGridColumns{
+    width: 50%;
+    border:0px;
+}
+.panel1noBorders.ui-panelgrid>*>tr,
+.ui-panelgrid .ui-panelgrid-cell {
+    border: none;
+    border-width: 0px;
+    border-color: white;
+    vertical-align: auto;
+}
+.blackCells{
+    background: black;
+    color:white
+}
+
