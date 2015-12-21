@@ -201,24 +201,20 @@ public class Utils {
             }
 
         } else {
-            int lastValue = series.get(0).size() - 1;
-            ArrayList seriesAdded = new ArrayList();
 
+            ArrayList seriesAdded = new ArrayList();
+            int lastValue = series.get(0).size() - 1;
             for (int i = 0; i < roots.length; i++) {
-                double distance = 0;
-                int serieToadd = 0;
+                double distance = 0; //minimum distance between one value of the serie and the current root
+                int serieToadd = 0;//serie in which the root is going to be added
                 Complex sol = roots[i];
                 for (int j = 0; j < series.size(); j++) {
                     double module = getModule(substractComplex(series.get(j).get(lastValue), sol));
                     if (j == 0) {
                         distance = module;
-                    } else if (j > 0 && module <= distance && !seriesAdded.contains(j)) {
+                    } else if (module <= distance && !seriesAdded.contains(j)) {
                         serieToadd = j;
                         distance = module;
-
-                    } else if (module == 0.0 && !seriesAdded.contains(j)) {
-                        series.get(j).add(sol);
-                        j = series.size();
                     }
                 }
                 seriesAdded.add(serieToadd);

@@ -159,7 +159,7 @@ public class rLocusBean{
             } else {
                 //recalculate k value;
                 k = k - defaultInc;
-                defaultInc = defaultInc * 3 / 4;
+                defaultInc = defaultInc * 0.5;
             }
             System.out.println("k=" + k);
         }
