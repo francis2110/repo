@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="basePane" prefHeight="200" prefWidth="320" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.serialcommunicationard.FXMLController">
+    <children>
+        <GridPane layoutX="22.0" layoutY="23.0" prefHeight="117.0" prefWidth="320.0" AnchorPane.bottomAnchor="83.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Button id="blueButton" fx:id="blueLEDBttn" mnemonicParsing="false" onAction="#blueButtonAction" prefHeight="117.0" prefWidth="160.0" style="-fx-background-color: #00688B;" text="Blue LED" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                    <graphic>
+                        <ImageView fitHeight="70.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/lightOFF.jpg" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button id="redLED" fx:id="redLEDBttn" mnemonicParsing="false" onAction="#redLEDAction" prefHeight="117.0" prefWidth="160.0" style="-fx-background-color: #700000;" text="Red LED" GridPane.columnIndex="1">
+                    <graphic>
+                        <ImageView fitHeight="70.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/lightOFF.jpg" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </children>
+        </GridPane>
+        <ComboBox fx:id="portsCmb" layoutX="161.0" layoutY="123.0" onAction="#portSelection" prefWidth="150.0" />
+        <Label layoutX="61.0" layoutY="129.0" text="Port selection:" />
+        <Button fx:id="startCommBttn" disable="true" layoutX="172.0" layoutY="152.0" mnemonicParsing="false" onAction="#startBttnAction" text="start " />
+      <Button fx:id="closeCmmBttn" disable="true" layoutX="244.0" layoutY="152.0" mnemonicParsing="false" onAction="#closeBttnAction" text="close" />
+      
+    </children>
+</AnchorPane>

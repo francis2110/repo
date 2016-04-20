@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="apponsaresmanagement.controllers.trailerRent.TrailerDataPanelController">
+  <children>
+    <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <bottom>
+        <Text fx:id="validatorTxt" fill="#cc0000" strokeType="OUTSIDE" strokeWidth="0.0" text="" BorderPane.alignment="CENTER" />
+      </bottom>
+      <center>
+        <GridPane prefHeight="338.0" prefWidth="596.0" BorderPane.alignment="CENTER_RIGHT">
+          <children>
+            <Label text="Matricula remolque:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <Label text="fecha del remolque:" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+            <Label text="fecha compra:" GridPane.columnIndex="4" GridPane.rowIndex="0" />
+            <Label id="trailerPriceTxt" text="precio compra:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextField fx:id="trailerRegisNumberTxt" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <TextField fx:id="trailerYearTxt" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="0">
+              <tooltip>
+                <Tooltip maxWidth="110.0" minWidth="110.0" prefWidth="110.0" text="La fecha tiene que tener el formato: dd/MM/aaaa" width="110.0" wrapText="true" />
+              </tooltip>
+            </TextField>
+            <TextField id="trailer" fx:id="trailerPurchaseDateTxt" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="0">
+              <tooltip>
+                <Tooltip maxWidth="110.0" minWidth="110.0" prefWidth="110.0" text="La fecha tiene que tener el formato: dd/MM/aaaa" width="110.0" wrapText="true" />
+              </tooltip>
+            </TextField>
+            <TextField fx:id="trailerPriceTxt" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+              <tooltip>
+                <Tooltip text="Utilice &quot;.&quot; para separar los centimos." />
+              </tooltip>
+            </TextField>
+            <Label text="fecha itv:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextField fx:id="itvDateTxt" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+              <tooltip>
+                <Tooltip maxWidth="110.0" minWidth="110.0" prefWidth="110.0" text="La fecha tiene que tener el formato: dd/MM/aaaa" width="110.0" wrapText="true" />
+              </tooltip>
+            </TextField>
+          </children>
+          <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          </rowConstraints>
+        </GridPane>
+      </center>
+    </BorderPane>
+  </children>
+  <stylesheets>
+    <URL value="@trailerdatapanel.css" />
+  </stylesheets>
+</AnchorPane>

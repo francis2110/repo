@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="controlDoc" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="274e6033-a278-4949-997e-0950b1191ec5">
+    <property name="ireport.zoom" value="4.0"/>
+    <property name="ireport.x" value="584"/>
+    <property name="ireport.y" value="0"/>
+    <parameter name="driver" class="java.lang.String"/>
+    <parameter name="travelDate" class="java.lang.String"/>
+    <parameter name="travelHour" class="java.lang.String"/>
+    <parameter name="reference" class="java.lang.String"/>
+    <parameter name="travelId" class="java.lang.String"/>
+    <parameter name="container" class="java.lang.String"/>
+    <parameter name="precinto" class="java.lang.String"/>
+    <parameter name="bultos" class="java.lang.String"/>
+    <parameter name="mercancia" class="java.lang.String"/>
+    <parameter name="peso" class="java.lang.String"/>
+    <parameter name="nif" class="java.lang.String"/>
+    <parameter name="camion" class="java.lang.String"/>
+    <parameter name="remolque" class="java.lang.String"/>
+    <parameter name="lugarRecogida" class="java.lang.String"/>
+    <parameter name="lugarEntrega" class="java.lang.String"/>
+    <parameter name="estadoContainer" class="java.lang.String"/>
+    <parameter name="lugarCarga" class="java.lang.String"/>
+    <parameter name="cargador" class="java.lang.String"/>
+    <parameter name="hLlegadaPrev" class="java.lang.String"/>
+    <parameter name="observaciones" class="java.lang.String"/>
+    <parameter name="logo" class="java.lang.String"/>
+    <queryString language="SQL">
+		<![CDATA[]]>
+    </queryString>
+    <detail>
+        <band height="800" splitType="Stretch">
+            <rectangle>
+                <reportElement uuid="1d586e0a-e6f9-4f9a-84d4-41e8341f8ce9" x="0" y="0" width="555" height="97"/>
+            </rectangle>
+            <rectangle>
+                <reportElement uuid="9aae3820-cb71-4d52-bd5a-5285461bdbbb" x="0" y="97" width="262" height="90"/>
+            </rectangle>
+            <rectangle>
+                <reportElement uuid="5287863f-d936-4602-8395-4d306afe751d" x="262" y="97" width="293" height="90"/>
+            </rectangle>
+            <textField>
+                <reportElement uuid="aa680123-4b1d-4068-b820-af065b897d58" x="132" y="33" width="291" height="44"/>
+                <textElement textAlignment="Center" markup="none">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA["DOCUMENTO DE CONTROL ADMINISTRATIVO PARA LA REALIZACIÓN DE TRANSPORTE PÚBLICO DE MERCANCÍAS POR CARRETERA "]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement uuid="4a4b9905-9eec-4dbb-9d57-c7b0f3423d02" x="132" y="77" width="291" height="20"/>
+                <textElement>
+                    <font fontName="Times New Roman" size="11"/>
+                </textElement>
+                <text><![CDATA[(ORDEN FOM/2861/2012, BOE Nº5, DE ENERO DE 2013)]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="5bd9a565-477c-4570-9079-f8c1813cc0e4" x="0" y="97" width="168" height="12"/>
+                <textElement>
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[CARGADOR CONTRACTUAL:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="3d02047e-5631-4f1a-97d2-15aef5611714" x="0" y="109" width="190" height="60"/>
+                <textElement markup="styled"/>
+                <text><![CDATA[ONSARES LOGISTIC, S.L.<br/>AVDA. ALQUERÍA DE MORET 41 L-2 <br/>46210 PICANYA-VALENCIA<br/>B 9.852.8458<br/>Tel.: 699 17 76 62]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="525bf92d-04c2-4205-b43f-fb1fe1e787b6" x="262" y="97" width="161" height="20"/>
+                <textElement>
+                    <font size="10" isBold="true"/>
+                </textElement>
+                <text><![CDATA[TRANSPORTISTA EFECTIVO:]]></text>
+            </staticText>
+            <rectangle>
+                <reportElement uuid="3f921858-cbc9-43e6-b9ec-8a5774a4b3cb" x="0" y="187" width="262" height="20"/>
+            </rectangle>
+            <rectangle>
+                <reportElement uuid="243dbc8f-f267-426b-87d1-133ddef0a077" x="262" y="187" width="293" height="20"/>
+            </rectangle>
+            <staticText>
+                <reportElement uuid="764dea0a-ebd5-4baa-b18b-ab37f6bd87a8" x="0" y="187" width="45" height="20"/>
+                <textElement>
+                    <font isBold="true"/>
+                    <paragraph leftIndent="3"/>
+                </textElement>
+                <text><![CDATA[FECHA:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="00035b6e-7cb5-418b-9154-bc54d40ebbd1" x="143" y="186" width="37" height="20"/>
+                <textElement>
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[HORA:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="86a67cb5-340f-4249-9069-d187b21202d0" x="262" y="187" width="78" height="20"/>
+                <textElement>
+                    <font isBold="true"/>
+                    <paragraph leftIndent="2"/>
+                </textElement>
+                <text><![CDATA[REFERENCIA:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="088cdbf3-9803-49b7-9ab9-33c0e5919e80" x="440" y="186" width="32" height="20"/>
+                <textElement>
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[O.T.:]]></text>
+            </staticText>
+            <rectangle>
+                <reportElement uuid="97e7ce18-cf61-47c1-a9c0-411569b6edb2" x="0" y="207" width="262" height="43"/>
+            </rectangle>
+            <rectangle>
+                <reportElement uuid="10a89f34-7a0e-42c0-b5f7-28cb53c0fe6f" x="262" y="207" width="293" height="43"/>
+            </rectangle>
+            <staticText>
+                <reportElement uuid="4d328488-99d5-4a98-aa10-6dcd6abaf810" x="0" y="207" width="84" height="20"/>
+                <textElement>
+                    <font isBold="true"/>
+                    <paragraph leftIndent="2"/>
+                </textElement>
+                <text><![CDATA[CONTENEDOR:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="2f3122ab-e787-4e8f-a2e0-e6fed196420d" x="132" y="207" width="62" height="20"/>
+                <textElement>
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[PRECINTO:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="2e1cf306-af88-4c08-a658-c80c245ad1b9" x="262" y="206" width="49" height="20"/>
+                <textElement>
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[BULTOS:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="e904322f-fab0-40c5-977e-0c28d46c4779" x="325" y="206" width="72" height="20"/>
+                <textElement>
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[MERCANCIA:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="d3f79881-2c3b-4a99-99a2-065823e3283d" x="472" y="206" width="71" height="20"/>
+                <textElement>
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[PESO (kg.):]]></text>
+            </staticText>
+            <rectangle>
+                <reportElement uuid="1f0acd9c-64d9-45b4-95e9-23e63e95be7e" x="0" y="250" width="555" height="152"/>
+            </rectangle>
+            <staticText>
+                <reportElement uuid="acab47d6-c6aa-4687-ba3c-4cc96ae0c62b" x="0" y="250" width="84" height="20"/>
+                <textElement>
+                    <font isBold="true"/>
+                    <paragraph leftIndent="2"/>
+                </textElement>
+                <text><![CDATA[CONDUCTOR:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="c5ebc9c0-6c51-4ed5-b9e1-0e2091704058" x="196" y="250" width="31" height="20"/>
+                <textElement>
+                    <font isBold="true"/>
+                    <paragraph leftIndent="2"/>
+                </textElement>
+                <text><![CDATA[NIF:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="a1b6c073-b3b1-4b2f-934d-529eb11af702" x="286" y="250" width="54" height="20"/>
+                <textElement>
+                    <font isBold="true"/>
+                    <paragraph leftIndent="2"/>
+                </textElement>
+                <text><![CDATA[CAMIÓN:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="11dccbc0-df8a-4491-a71d-dc3253586a1f" x="423" y="250" width="72" height="20"/>
+                <textElement>
+                    <font isBold="true"/>
+                    <paragraph leftIndent="2"/>
+                </textElement>
+                <text><![CDATA[REMOLQUE:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="8c9e1765-5da6-4abf-a85e-23f6727f2254" x="0" y="290" width="78" height="20"/>
+                <textElement>
+                    <font isBold="true"/>
+                    <paragraph leftIndent="2"/>
+                </textElement>
+                <text><![CDATA[RECOGER EN:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="81ba8e88-ac02-418f-b06d-a6e3b5d65107" x="286" y="290" width="85" height="20"/>
+                <textElement>
+                    <font isBold="true"/>
+                    <paragraph leftIndent="2"/>
+                </textElement>
+                <text><![CDATA[ENTREGAR EN:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="c2d9bcf5-a484-4f6a-b738-bfd575dcb354" x="0" y="333" width="84" height="20"/>
+                <textElement>
+                    <font isBold="true"/>
+                    <paragraph leftIndent="2"/>
+                </textElement>
+                <text><![CDATA[LLENO/VACÍO:]]></text>
+            </staticText>
+            <rectangle>
+                <reportElement uuid="47d1568c-d3c8-4ecf-9cad-137e04342daa" x="0" y="402" width="555" height="20"/>
+            </rectangle>
+            <staticText>
+                <reportElement uuid="0bbc70bf-793c-4a36-b58d-468ce21bb336" x="11" y="402" width="132" height="20"/>
+                <textElement>
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[CARGADOR/RECEPTOR:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="783e2800-3e32-4c84-a95d-839b561cd742" x="250" y="402" width="75" height="20"/>
+                <textElement>
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[H. LLEGADA:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="b3bda824-7826-47c5-bd16-a255ea03f87a" x="407" y="402" width="65" height="20"/>
+                <textElement>
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[H. SALIDA:]]></text>
+            </staticText>
+            <rectangle>
+                <reportElement uuid="9bdaec07-a065-440b-9ef0-7931f5a4f9e7" x="0" y="422" width="262" height="113"/>
+            </rectangle>
+            <rectangle>
+                <reportElement uuid="d7d3f94a-9e0e-47c1-bbd3-cf6f74db967f" x="262" y="422" width="293" height="113"/>
+            </rectangle>
+            <staticText>
+                <reportElement uuid="89608e28-ffa3-4637-9f68-c162a8b04b0d" x="311" y="434" width="179" height="29"/>
+                <textElement markup="styled">
+                    <font size="9"/>
+                </textElement>
+                <text><![CDATA[SR. CARGADOR RELLENE LA HORA DE <br/>ENTRADA Y SALIDA, POR FAVOR.<br/>]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="9152bbe4-a873-4e3e-a021-036c71f1e3bb" x="372" y="463" width="100" height="20"/>
+                <textElement>
+                    <font size="9"/>
+                </textElement>
+                <text><![CDATA[FIRMA]]></text>
+            </staticText>
+            <rectangle>
+                <reportElement uuid="afdf3297-6f9f-4c9a-aeb2-09db47e2a451" x="0" y="535" width="555" height="265"/>
+            </rectangle>
+            <staticText>
+                <reportElement uuid="7ceaa8f7-34de-4f63-a453-ac4a79aafa37" x="0" y="535" width="100" height="20"/>
+                <textElement>
+                    <font isBold="true"/>
+                    <paragraph leftIndent="2"/>
+                </textElement>
+                <text><![CDATA[OBSERVACIONES:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="f7a142ce-5770-493a-a89d-e0173d05734f" x="0" y="722" width="507" height="63"/>
+                <textElement textAlignment="Left" markup="html">
+                    <font size="8"/>
+                </textElement>
+                <text><![CDATA[<b>     SR. TRANSPORTISTA: **** </b>Verifique el tipo de contenedor y estado según orden de su cliente. Declinaremos cualquier responsabilidad en caso de no aceptación de equipo inapropiado. <b>****</b><br>
+<b>     SR. CLIENTE:</b> Advertimos que en caso de sobrepasar el peso autorizado por la legislación vigente, las sanciones correran por cuenta del Cargador/Receptor. La compañia ONSARES LOGISTIC, S.L. no admitirá ninguna responsabilidad derivada de estas causas. <br>
+**** Desconocemos la cantidad y números de bultos así como la mercancía que dice contener.***]]></text>
+            </staticText>
+            <textField isBlankWhenNull="true">
+                <reportElement uuid="0ee199bf-2cd3-4dba-aabb-3e1cbe49bf20" x="45" y="187" width="98" height="20"/>
+                <textElement/>
+                <textFieldExpression><![CDATA[$P{travelDate}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement uuid="40183824-84aa-42a5-8ed3-4ddf9932fd61" x="180" y="187" width="82" height="20"/>
+                <textElement/>
+                <textFieldExpression><![CDATA[$P{travelHour}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement uuid="760d75d9-4f2b-496a-bdd7-34435a867233" x="340" y="186" width="85" height="20"/>
+                <textElement/>
+                <textFieldExpression><![CDATA[$P{reference}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement uuid="c39c73c0-6029-433f-aba5-9584e01783a9" x="470" y="187" width="85" height="20"/>
+                <textElement/>
+                <textFieldExpression><![CDATA[$P{travelId}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement uuid="8117eaf9-9ed3-4241-80db-a93412b0ef65" x="0" y="226" width="114" height="20"/>
+                <textElement>
+                    <paragraph leftIndent="4"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{container}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement uuid="5bf402d3-7958-416c-ad3a-3ba9ecda9cf7" x="132" y="226" width="118" height="20"/>
+                <textElement/>
+                <textFieldExpression><![CDATA[$P{precinto}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement uuid="c1bbaef7-610a-4c92-9adb-9507be4142bc" x="262" y="230" width="49" height="20"/>
+                <textElement>
+                    <paragraph leftIndent="4"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{bultos}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement uuid="cdbb17ad-07d8-424c-a729-f0e1068b4c57" x="325" y="227" width="133" height="20"/>
+                <textElement/>
+                <textFieldExpression><![CDATA[$P{mercancia}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement uuid="c87c1462-76bc-4c79-9958-e921e78e0b34" x="472" y="226" width="83" height="20"/>
+                <textElement/>
+                <textFieldExpression><![CDATA[$P{peso}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement uuid="f6265f4e-65f5-460a-8332-29609f14d205" x="307" y="270" width="100" height="20"/>
+                <textElement/>
+                <textFieldExpression><![CDATA[$P{camion}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement uuid="bb089c69-eef3-491c-a003-5d246152340a" x="440" y="270" width="115" height="20"/>
+                <textElement/>
+                <textFieldExpression><![CDATA[$P{remolque}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement uuid="a623ffa1-d126-4f4b-883c-30b7a54d3160" x="0" y="313" width="262" height="20"/>
+                <textElement>
+                    <paragraph leftIndent="4"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{lugarRecogida}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement uuid="85a64d8f-82e1-4780-b1d6-6de8f65ae437" x="286" y="313" width="269" height="20"/>
+                <textElement/>
+                <textFieldExpression><![CDATA[$P{lugarEntrega}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement uuid="3da3d688-0231-4ee4-872d-015375d5ee5d" x="0" y="353" width="100" height="20"/>
+                <textElement>
+                    <paragraph leftIndent="4"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{estadoContainer}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement uuid="4df68166-a790-49df-b23d-cb5c7627e5de" x="0" y="443" width="227" height="20"/>
+                <textElement>
+                    <paragraph leftIndent="4"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{lugarCarga}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement uuid="7b46c1e5-e937-4b70-a57b-b693c60a39da" x="0" y="483" width="250" height="20"/>
+                <textElement>
+                    <paragraph leftIndent="4"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{cargador}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement uuid="70d373c6-54c6-4a1d-b4cf-db3d6989612d" x="323" y="402" width="68" height="20"/>
+                <textElement/>
+                <textFieldExpression><![CDATA[$P{hLlegadaPrev}]]></textFieldExpression>
+            </textField>
+            <textField isStretchWithOverflow="true" isBlankWhenNull="true">
+                <reportElement uuid="cf812e21-dc56-4549-b51c-bb7c8402138a" x="0" y="555" width="555" height="148"/>
+                <textElement textAlignment="Justified"/>
+                <textFieldExpression><![CDATA[$P{observaciones}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement uuid="8d23ab7e-b53b-43f1-9a2a-1ff93cc4d585" x="0" y="270" width="180" height="20"/>
+                <textElement>
+                    <paragraph leftIndent="4"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{driver}]]></textFieldExpression>
+            </textField>
+            <image>
+                <reportElement uuid="92a4daa2-73dd-48b8-a6bf-f2d2a0066d01" x="132" y="2" width="54" height="32"/>
+                <imageExpression><![CDATA[$P{logo}]]></imageExpression>
+            </image>
+            <textField isBlankWhenNull="true">
+                <reportElement uuid="73325fef-fda8-41cf-aea5-9eae1e658f72" x="194" y="270" width="100" height="20"/>
+                <textElement/>
+                <textFieldExpression><![CDATA[$P{nif}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement uuid="cfd35a2c-009f-4bf9-a1cd-d4d3c95d770d" x="174" y="0" width="266" height="33"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Arial" size="22" isBold="true"/>
+                </textElement>
+                <text><![CDATA[NSARES LOGISTIC, S.L.]]></text>
+            </staticText>
+        </band>
+    </detail>
+</jasperReport>

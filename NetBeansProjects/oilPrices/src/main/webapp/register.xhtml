@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:ezcomp="http://xmlns.jcp.org/jsf/composite/ezcomp"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <body >
+
+        <ui:composition template="./index.xhtml">
+
+            <ui:define name="menu">
+                <h:form>
+                    <ezcomp:basicMenu/>
+                </h:form>
+            </ui:define>
+
+            <ui:define name="title of page">
+                <h3 >
+                    Registro
+                </h3>
+            </ui:define>
+
+            <ui:define name="content">
+                <h:form style="font-size: 0.8em" >
+                    <p class="sangria">
+                        <p:outputPanel class="paragraphStyle">
+                            El registro en esta aplicación te permite tener historial sobre el número de repostajes, vehículo al que suministras, combustible del mismo, precio del carburante, 
+                            la evolución del precio de un carburante a lo largo del tiempo de una estaciónde servicio, etc.
+                        </p:outputPanel>
+                    </p>
+                    <p:spacer/>
+                    <p class="sangria">
+                        <p:outputPanel class="paragraphStyle">
+                            Si su registro se realiza correctamente será redirigido a la página en la que puede realizar su login e inicia su sesión como usuario registrado.
+                        </p:outputPanel>
+                    </p>
+                    
+                    <p:panelGrid columns="6">
+                        <p:outputLabel for="userNameTxt" value="Nombre de usuario:*"/>
+                        <p:inputText id="userNameTxt" validator="#{loginBean.verifyUser}" value="#{loginBean.userId}">
+                            <p:ajax event="blur" update="userNameMssg"/>
+                        </p:inputText>
+                        <p:message id="userNameMssg"  for="userNameTxt"/>
+                        <p:outputLabel for="passwordTxt" value="Contraseña:*"/>
+                        <p:password id="passwordTxt" validator="#{loginBean.verifyPassword}" >
+                            <p:ajax event="blur" update="passwordMssg"/>
+                        </p:password>
+                        <p:message id="passwordMssg" for="passwordTxt"/>
+                        <p:outputLabel value=" Repita contraseña:*" for="repeatPasswordTxt"/>
+                        <p:password id="repeatPasswordTxt" validator="#{loginBean.confirmPassword}"  >
+                            <p:ajax event="blur" update="repeatPasswordMssg"/>
+                        </p:password>
+                        <p:message id="repeatPasswordMssg" for="repeatPasswordTxt"/>
+                        <p:commandButton value="Registrarse" action="#{loginBean.createUser}"/>
+                    </p:panelGrid>
+                </h:form>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

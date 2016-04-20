@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="apponsaresmanagement.controllers.travels.NewTravelController">
+  <children>
+    <BorderPane fx:id="newTravelBPn" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <bottom>
+        <GridPane>
+          <children>
+            <Button fx:id="createTravelBtn" mnemonicParsing="false" onAction="#insertNewTravel" text="Crear" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+          </children>
+          <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          </rowConstraints>
+        </GridPane>
+      </bottom>
+      <top>
+        <Label fx:id="titleLbl" minHeight="-1.0" prefHeight="-1.0" text="Insertar nuevo viaje:" BorderPane.alignment="CENTER" />
+      </top>
+    </BorderPane>
+  </children>
+  <stylesheets>
+    <URL value="@../../../newtravel.css" />
+  </stylesheets>
+</AnchorPane>

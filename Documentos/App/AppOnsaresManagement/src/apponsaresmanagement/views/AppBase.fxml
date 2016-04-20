@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?language javascript?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml" fx:controller="apponsaresmanagement.controllers.AppBaseController">
+  <children>
+    <BorderPane fx:id="borderPane" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <top>
+        <VBox prefHeight="99.0" prefWidth="600.0">
+          <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="Transporte">
+                  <items>
+                    <Menu mnemonicParsing="false" text="Cliente">
+                      <items>
+                        <MenuItem id="nuevoCliente" mnemonicParsing="false" onAction="#newClient" text="Nuevo cliente" />
+                        <MenuItem mnemonicParsing="false" onAction="#seeClient" text="Ver cliente" />
+                        <MenuItem mnemonicParsing="false" onAction="#editClient" text="Editar cliente" />
+                      </items>
+                    </Menu>
+                    <Menu mnemonicParsing="false" text="Viaje">
+                      <items>
+                        <MenuItem mnemonicParsing="false" onAction="#newTravel" text="Nuevo viaje" />
+                        <MenuItem mnemonicParsing="false" onAction="#lookForTravel" text="Buscar viaje" />
+                      </items>
+                    </Menu>
+                    <Menu mnemonicParsing="false" text="Transportistas">
+                      <items>
+                        <MenuItem mnemonicParsing="false" onAction="#newTruckDriver" text="Nuevo transportista" />
+                        <MenuItem mnemonicParsing="false" onAction="#seeDriver" text="Ver transportista" />
+                        <MenuItem mnemonicParsing="false" onAction="#editDriver" text="Editar transportista" />
+                      </items>
+                    </Menu>
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Remolques">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#addNewTrailer" text="Nuevo remolque" fx:id="newTrailerItm" />
+                    <Menu mnemonicParsing="false" text="Alquiler">
+                      <items>
+                        <MenuItem mnemonicParsing="false" onAction="#actualTrailersRentalAction" text="Mis remolques" fx:id="actualTrailerRental" />
+                        <MenuItem mnemonicParsing="false" onAction="#oldTrailersBtnAction" text="Antiguos remolques" fx:id="oldTrailersItm" />
+                      </items>
+                    </Menu>
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Balances">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <ToolBar id="savet" fx:id="backupBtn">
+              <items>
+                <Button mnemonicParsing="false" onAction="#backupData" text="Copiar datos">
+                  <graphic>
+                    <ImageView fitHeight="60.0" fitWidth="60.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                      <image>
+                        <Image url="@../../saveIcon.png" />
+                      </image>
+                    </ImageView>
+                  </graphic>
+                </Button>
+              </items>
+            </ToolBar>
+          </children>
+        </VBox>
+      </top>
+    </BorderPane>
+  </children>
+  <stylesheets>
+    <URL value="@../../appbase.css" />
+  </stylesheets>
+</AnchorPane>

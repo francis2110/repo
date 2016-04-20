@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="apponsaresmanagement.controllers.truckDriver.SeeDriversDataController">
+  <children>
+    <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <center>
+        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="TOP_LEFT">
+          <children>
+            <GridPane alignment="TOP_RIGHT" minHeight="300.0" VBox.vgrow="SOMETIMES">
+              <children>
+                <Label text="Nombre:" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                  <font>
+                    <Font name="Comic Sans MS Bold" size="16.0" fx:id="x1" />
+                  </font>
+                </Label>
+                <Label fx:id="nameLbl" text="" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                  <font>
+                    <Font name="System Italic" size="16.0" fx:id="x4" />
+                  </font>
+                </Label>
+                <Label font="$x1" text="Primer apellido:" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                <Label fx:id="firstSurnameLbl" font="$x4" text="" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+                <Label font="$x1" text="Segundo apellido:" GridPane.columnIndex="4" GridPane.rowIndex="0" />
+                <Label fx:id="secondSurnameLbl" font="$x4" text="" GridPane.columnIndex="5" GridPane.rowIndex="0" />
+                <Label font="$x1" text="Matrícula tractora:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <Label fx:id="truckRegistrationNumLbl" font="$x4" prefWidth="-1.0" text="" GridPane.columnIndex="1" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" />
+                <Label font="$x1" text="Matrícula remolque:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                <Label fx:id="trailerRegistrationLbl" font="$x4" text="" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                <Label font="$x1" text="Dirección:" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                <Label fx:id="addressLbl" font="$x4" text="" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                <Label font="$x1" text="nº de viajes:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <Label fx:id="travelLbl" font="$x4" text="" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Label font="$x1" text="Kms. realizados:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                <Label fx:id="kmsLbl" font="$x4" text="" GridPane.columnIndex="3" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="2" />
+                <Label font="$x1" text="Ingresos totales:" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                <Label fx:id="totalIncomeLbl" font="$x4" text="" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                <Label font="$x1" text="Facturado mes pasado:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <Label fx:id="lastMonthIncomeLbl" font="$x4" text="" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Label font="$x1" text="Valoración:" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                <Label id="appreciation" fx:id="appreciationLbl" font="$x4" prefWidth="-1.0" text="" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                <Label font="$x1" text="Email:" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                <Label fx:id="emailLbl" font="$x4" text="" GridPane.columnIndex="5" GridPane.halignment="LEFT" GridPane.rowIndex="3" />
+                <Label font="$x1" prefWidth="86.0" text="Teléfono:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                <Label fx:id="phoneNumberLbl" font="$x4" text="" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <Label font="$x1" text="NIF:" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                <Label fx:id="nifLbl" font="$x4" text="" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+              </children>
+              <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="-1.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-1.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-1.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-1.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-1.0" minHeight="10.0" prefHeight="14.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+            <GridPane alignment="TOP_CENTER" maxWidth="555.0" minWidth="555.0" padding="$x3" pickOnBounds="true" prefWidth="555.0">
+              <children>
+                <Label text="Entidad" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                  <font>
+                    <Font name="Comic Sans MS Bold" size="14.0" fx:id="x2" />
+                  </font>
+                  <GridPane.margin>
+                    <Insets right="2.0" fx:id="x3" />
+                  </GridPane.margin>
+                </Label>
+                <Label alignment="CENTER" prefWidth="9.999900000002526" text="/" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Label alignment="CENTER" prefWidth="273.0" text="/" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                <Label alignment="CENTER" prefWidth="273.0" text="/" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                <Label fx:id="entidadLbl" text="" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <Label font="$x2" text="Nº de oficina" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                <Label fx:id="officeNumberLbl" text="" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                <Label font="$x2" text="Dígito control:" GridPane.columnIndex="4" GridPane.rowIndex="0" />
+                <Label fx:id="controlDigitNumberLbl" text="" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                <Label font="$x2" text="Nº de cuenta" GridPane.columnIndex="6" GridPane.rowIndex="0" />
+                <Label fx:id="accountNumberLbl" text="" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+              </children>
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="80.0" minWidth="80.0" prefWidth="80.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="10.0" minWidth="10.0" prefWidth="10.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="95.0" minWidth="95.0" prefWidth="95.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="10.0" minWidth="10.0" prefWidth="10.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="10.0" minWidth="10.0" prefWidth="10.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="180.0" minWidth="100.0" prefWidth="130.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+          </children>
+          <padding>
+            <Insets left="20.0" />
+          </padding>
+        </VBox>
+      </center>
+      <top>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Datos del transportista:">
+          <font>
+            <Font name="Calibri Bold" size="20.0" />
+          </font>
+        </Text>
+      </top>
+    </BorderPane>
+  </children>
+  <stylesheets>
+    <URL value="@../../../seedriversdata.css" />
+  </stylesheets>
+</AnchorPane>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?language javascript?>
+
+<AnchorPane fx:id="AnchorPane" maxHeight="400.0" maxWidth="600.0" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" styleClass="AnchorPane" xmlns:fx="http://javafx.com/fxml" fx:controller="apponsaresmanagement.controllers.LogginController">
+  <children>
+    <GridPane id="Login" alignment="BASELINE_RIGHT" maxHeight="400.0" maxWidth="600.0" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" styleClass="root" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <Text id="welcomeText" scaleX="0.9130289678203816" styleClass="null" text="Bienvenido/a" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label fx:id="userLbl" text="Usuario:" GridPane.columnIndex="1" GridPane.rowIndex="1">
+          <font>
+            <Font name="Comic Sans MS" size="16.0" fx:id="x1" />
+          </font>
+          <textFill>
+            <Color blue="0.600" green="0.000" red="0.047" fx:id="x2" />
+          </textFill>
+        </Label>
+        <TextField id="" fx:id="userTxt" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.hgrow="NEVER" GridPane.rowIndex="1" />
+        <Label fx:id="passwordLbl" font="$x1" text="Contraseña:" textFill="$x2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Label text="Label" textFill="RED" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+        <Button id="login" fx:id="loginBtn" mnemonicParsing="false" onAction="#loginAction" onMouseDragEntered="shadowOn" onMouseDragExited="#shadowOff" text="Aceptar" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+        <Text fx:id="validatorTxt" fill="#cc0000" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="4">
+          <font>
+            <Font size="16.0" />
+          </font>
+        </Text>
+        <PasswordField fx:id="passwordTxt" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="20.0" prefWidth="100.0" />
+        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" percentWidth="30.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints maxHeight="35.0" minHeight="35.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="35.0" minHeight="35.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="35.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="35.0" minHeight="35.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="35.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+  </children>
+  <stylesheets>
+    <URL value="@../../Login.css" />
+  </stylesheets>
+</AnchorPane>

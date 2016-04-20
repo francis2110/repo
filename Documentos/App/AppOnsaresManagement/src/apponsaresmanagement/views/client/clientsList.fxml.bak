@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?language javascript?>
+
+<AnchorPane id="AnchorPane" fx:id="tableContent" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="apponsaresmanagement.controllers.ClientsListController">
+  <children>
+    <BorderPane fx:id="borderPane" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <center>
+        <TableView fx:id="clientsListTbl" onMouseClicked="#showClient" prefHeight="400.0" prefWidth="600.0">
+          <columns>
+            <TableColumn prefWidth="130.0" text="Nombre" fx:id="nameColumn">
+              <cellValueFactory>
+                <PropertyValueFactory property="nombre" />
+              </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="130.0" text="Contacto" fx:id="contactColumn">
+              <cellValueFactory>
+                <PropertyValueFactory property="contacto" />
+              </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="130.0" text="Email" fx:id="emailColumn">
+              <cellValueFactory>
+                <PropertyValueFactory property="email" />
+              </cellValueFactory>
+            </TableColumn>
+          </columns>
+        </TableView>
+      </center>
+    </BorderPane>
+  </children>
+  <stylesheets>
+    <URL value="@../../clientslist.css" />
+  </stylesheets>
+</AnchorPane>

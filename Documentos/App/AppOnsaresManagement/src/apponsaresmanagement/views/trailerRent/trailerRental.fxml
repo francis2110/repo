@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="apponsaresmanagement.controllers.trailerRent.TrailerRentalController">
+  <children>
+    <VBox prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <Label text="Seleccione el remolque que desea editar. Si el remolque ya no le pertenece no podra editarlo.  Unicamente podra ver los datos de alquiler relativos al remolque en &quot;Antiguos remolques&quot;" textAlignment="JUSTIFY" wrapText="true" />
+        <TableView fx:id="trailerTbl" onMouseClicked="#clickTrailerTableRow" prefHeight="307.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+          <columns>
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="107.0" text="Remolque" fx:id="trailerColumn" />
+            <TableColumn prefWidth="75.0" text="Estado" fx:id="stateColumn" />
+          </columns>
+        </TableView>
+      </children>
+    </VBox>
+  </children>
+  <stylesheets>
+    <URL value="@trailerrental.css" />
+  </stylesheets>
+</AnchorPane>

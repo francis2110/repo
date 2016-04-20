@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+        <h:outputStylesheet library="webjars" name="font-awesome/4.3.0/css/font-awesome-jsf.css" />
+        <h:outputStylesheet library="css" name="cssStyle.css"/>
+    </h:head>
+    <h:body>
+        <script language="javascript" type="text/javascript">
+            function extend() {
+                this.cfg.sortData = false;
+                this.cfg.seriesDefaults.rendererOptions.dataLabelFormatString = '%.5f%%';
+                this.cfg.seriesDefaults.rendererOptions.dataLabelThreshold = 0;
+
+            }
+        </script>
+        <h:form>
+            <p:panelGrid >
+                <p:row>
+                    <p:column styleClass="blackCells"><p:outputLabel styleClass="whiteText" value="numerador proceso:"/></p:column>
+                    <p:column styleClass="blackCells"><p:inputText value="#{rLocusBean.pNum}"/></p:column>
+                    <p:column styleClass="blackCells"><p:outputLabel value="denominador proceso:"/></p:column>
+                    <p:column styleClass="blackCells"><p:inputText value="#{rLocusBean.pDen}"/></p:column>
+                </p:row>
+                <p:row>
+                    <p:column styleClass="blackCells"><p:outputLabel  value="numerador sensor:"/></p:column>
+                    <p:column styleClass="blackCells"><p:inputText value="#{rLocusBean.sNum}"/></p:column>
+                    <p:column styleClass="blackCells"><p:outputLabel styleClass="fdtLabels" value="denominador sensor:"/></p:column>
+                    <p:column styleClass="blackCells"><p:inputText value="#{rLocusBean.sDen}"/></p:column>
+                </p:row>
+                <f:facet name="footer"><p:commandButton value="Calcular" action="#{rLocusBean.calculateRootLocus}" update="rLocusPlot" ajax="false"/></f:facet>
+            </p:panelGrid>
+            <p:chart type="line" id="rLocusPlot" model="#{rLocusBean.model}" style="height: 400px;"/>
+        </h:form>
+
+    </h:body>
+</html>
+

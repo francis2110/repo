@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" fx:id="panelPn" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="apponsaresmanagement.controllers.travels.TravelPanelController">
+  <children>
+    <VBox prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <HBox alignment="CENTER" prefHeight="74.0" prefWidth="600.0">
+          <children>
+            <Label fx:id="albaranLbl" text="">
+              <font>
+                <Font name="Georgia" size="16.0" />
+              </font>
+            </Label>
+          </children>
+        </HBox>
+        <GridPane fx:id="travelGp" alignment="CENTER_RIGHT" hgap="5.0" prefHeight="304.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+          <children>
+            <Label alignment="CENTER_RIGHT" text="fecha llegada:" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="0" />
+            <Label alignment="CENTER_RIGHT" text="Valor del viaje (€):" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="0" />
+            <Label text="Cantidad a transportista (€):" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="0" />
+            <Label alignment="CENTER_RIGHT" text="Distancia viaje (km):" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+            <Label alignment="CENTER_RIGHT" text="Número de contenedor:" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+            <Label fx:id="addresseeLbl" text="" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Label alignment="CENTER_RIGHT" text="Tipo pago:" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="8" />
+            <Label alignment="CENTER_RIGHT" text="IVA:" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="8" />
+            <ComboBox fx:id="ivaCb" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="8">
+              <items>
+                <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Item 1" />
+                  <String fx:value="Item 2" />
+                  <String fx:value="Item 3" />
+                </FXCollections>
+              </items>
+            </ComboBox>
+            <TextField fx:id="dateTxt" maxWidth="100.0" prefWidth="100.0" promptText="dd/MM/aaaa" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <TextField fx:id="travelValueTxt" prefWidth="87.0" GridPane.columnIndex="3" GridPane.rowIndex="0">
+              <tooltip>
+                <Tooltip text="Utilizar '.' como separador." textAlignment="JUSTIFY" />
+              </tooltip>
+            </TextField>
+            <TextField fx:id="moneyforDriverTxt" prefWidth="79.0" GridPane.columnIndex="5" GridPane.rowIndex="0">
+              <tooltip>
+                <Tooltip text="Utilizar '.' como separador." textAlignment="JUSTIFY" />
+              </tooltip>
+            </TextField>
+            <TextField fx:id="distanceTxt" maxWidth="100.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+              <tooltip>
+                <Tooltip contentDisplay="CENTER" maxHeight="-1.0" maxWidth="150.0" minWidth="150.0" prefHeight="-1.0" prefWidth="150.0" text="Distancia en kms. Si el numero es decimal utilizar ',&quot; como separador." textAlignment="JUSTIFY" textOverrun="ELLIPSIS" width="150.0" wrapText="true" />
+              </tooltip>
+            </TextField>
+            <TextField fx:id="containerTxt" prefWidth="95.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <TextField fx:id="paymentTypeTxt" maxWidth="100.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+              <tooltip>
+                <Tooltip contentDisplay="CENTER" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" text="Dias para que el cliente pague el viaje." width="150.0" wrapText="true" />
+              </tooltip>
+            </TextField>
+            <Text fx:id="validatorTxt" fill="#cc0000" strokeType="OUTSIDE" strokeWidth="0.0" text="" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="19">
+              <font>
+                <Font size="16.0" />
+              </font>
+            </Text>
+            <Label text="Gastos de naviera (€):" GridPane.columnIndex="2" GridPane.rowIndex="11" />
+            <Label text="Despacho aduana (€):" GridPane.columnIndex="4" GridPane.rowIndex="11" />
+            <Label id="othersDescriptionTFld" text="Otros:" GridPane.columnIndex="0" GridPane.rowIndex="12" />
+            <Label text="Cantidad otros (€):" GridPane.columnIndex="4" GridPane.rowIndex="12" />
+            <TextField fx:id="shippingExpensesTxt" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="11">
+              <tooltip>
+                <Tooltip text="Utilizar '.' como separador." />
+              </tooltip>
+            </TextField>
+            <TextField fx:id="customsTxt" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="11">
+              <tooltip>
+                <Tooltip text="Utilizar '.' como separador." />
+              </tooltip>
+            </TextField>
+            <TextField fx:id="otherExpensesTxt" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="12">
+              <tooltip>
+                <Tooltip text="Utilizar '.' como separador." />
+              </tooltip>
+            </TextField>
+            <TextArea fx:id="othersDescriptionTFld" prefWidth="200.0" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="12" GridPane.rowSpan="3" />
+            <Label id="townLbl" text="Origen:" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
+            <TextField id="townTxt" fx:id="originTxt" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label text="Precinto:" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+            <TextField fx:id="sealTxt" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <Label text="Tipo de contenedor:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <TextField fx:id="containerTypeTxt" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Destino:" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <TextField fx:id="destinationTxt" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+            <Label alignment="CENTER_RIGHT" text="Tipo de viaje:" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+              <tooltip>
+                <Tooltip text="quien recibe la mercancia" />
+              </tooltip>
+            </Label>
+            <ComboBox fx:id="travelTypeCb" GridPane.columnIndex="5" GridPane.rowIndex="5">
+              <items>
+                <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Item 1" />
+                  <String fx:value="Item 2" />
+                  <String fx:value="Item 3" />
+                </FXCollections>
+              </items>
+            </ComboBox>
+            <Label text="Bultos:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <TextField fx:id="packageTxt" prefWidth="200.0" text="" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Label contentDisplay="LEFT" prefWidth="-1.0" text="Mercancia:" textAlignment="LEFT" wrapText="false" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+            <TextField id="commodity" fx:id="commodityTxt" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+            <Label text="Peso (kg):" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <TextField fx:id="weightTxt" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+              <tooltip>
+                <Tooltip text="Si tiene que introducir numeros decimlles con &quot;.&quot;" />
+              </tooltip>
+            </TextField>
+            <Label id="collectionPlaceTxt" text="Lugar recogida:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+            <Label text="Lugar carga/descarga:" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <Label text="Cargador:" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+            <Label text="Hora de llegada:" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+            <Label id="exitHourTxt" text="Hora de salida:" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+            <Label text="Lugar de entrega:" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+            <TextField fx:id="collectionPlaceTxt" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextField id="loadTxt" fx:id="loadPlaceTxt" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+            <TextField fx:id="carrierTxt" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+            <TextField id="arriveTxt" fx:id="arriveHourTxt" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+              <tooltip>
+                <Tooltip text="Poner hora separada por dos puntos en formato 24 horas." />
+              </tooltip>
+            </TextField>
+            <TextField fx:id="exitHourTxt" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="7">
+              <tooltip>
+                <Tooltip text="Poner la hora en formato 24 horas separada por dos puntos." />
+              </tooltip>
+            </TextField>
+            <TextField fx:id="deliveryPlaceTxt" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+            <Label text="Estado cliente:" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="9" />
+            <ComboBox fx:id="clientPaymentCb" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="9">
+              <items>
+                <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Item 1" />
+                  <String fx:value="Item 2" />
+                  <String fx:value="Item 3" />
+                </FXCollections>
+              </items>
+            </ComboBox>
+            <Label alignment="CENTER_RIGHT" text="Estado transportista:" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="9" />
+            <ComboBox id="driver" fx:id="driverPaymentCb" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="9">
+              <items>
+                <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Item 1" />
+                  <String fx:value="Item 2" />
+                  <String fx:value="Item 3" />
+                </FXCollections>
+              </items>
+            </ComboBox>
+            <Label alignment="CENTER_RIGHT" text="Cliente:" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="10" />
+            <ComboBox fx:id="clientCb" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="10">
+              <items>
+                <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Item 1" />
+                  <String fx:value="Item 2" />
+                  <String fx:value="Item 3" />
+                </FXCollections>
+              </items>
+            </ComboBox>
+            <Label text="Transportista" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="10" />
+            <ComboBox fx:id="driverCb" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="10">
+              <items>
+                <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Item 1" />
+                  <String fx:value="Item 2" />
+                  <String fx:value="Item 3" />
+                </FXCollections>
+              </items>
+            </ComboBox>
+            <ComboBox id="treasuryState" fx:id="treasuryStateCb" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="8">
+              <items>
+                <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Item 1" />
+                  <String fx:value="Item 2" />
+                  <String fx:value="Item 3" />
+                </FXCollections>
+              </items>
+            </ComboBox>
+            <Label text="Estado hacienda:" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+            <Label text="Naviera:" GridPane.columnIndex="0" GridPane.rowIndex="15" />
+            <Label id="shippingTxt" text="Buque:" GridPane.columnIndex="2" GridPane.rowIndex="15" />
+            <Label id="dispatcherCb" contentDisplay="RIGHT" prefWidth="-1.0" text="Despachante:" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="15" />
+            <ComboBox fx:id="dispatcherCb" GridPane.columnIndex="5" GridPane.rowIndex="15">
+              <items>
+                <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Item 1" />
+                  <String fx:value="Item 2" />
+                  <String fx:value="Item 3" />
+                </FXCollections>
+              </items>
+            </ComboBox>
+            <TextField fx:id="shippingTxt" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="15" />
+            <TextField fx:id="boatTxt" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="15" />
+            <Label text="Observaciones:" textAlignment="JUSTIFY" GridPane.columnIndex="0" GridPane.rowIndex="16" />
+            <TextArea fx:id="observationsTxt" prefHeight="22.0" prefWidth="193.0" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.rowIndex="16" GridPane.rowSpan="3" />
+            <CheckBox fx:id="containerStateCkb" mnemonicParsing="false" text="Lleno" GridPane.columnIndex="5" GridPane.rowIndex="3">
+              <tooltip>
+                <Tooltip text="Seleccione la casilla si el contenedor esta lleno en el momento de la recogida. En caso contrario dejelo vacio." />
+              </tooltip>
+            </CheckBox>
+            <Label text="hora prevista:" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <TextField fx:id="providedHourTxt" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Label text="Referencia:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+            <TextField fx:id="referenceTxt" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+          </children>
+          <columnConstraints>
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="-1.0" prefWidth="-1.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-1.0" prefWidth="-1.0" />
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="-1.0" prefWidth="-1.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-1.0" prefWidth="-1.0" />
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="-1.0" prefWidth="-1.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-1.0" prefWidth="-1.0" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints maxHeight="17.0" minHeight="10.0" prefHeight="17.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="17.0" minHeight="10.0" prefHeight="17.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="17.0" minHeight="10.0" prefHeight="17.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="17.0" minHeight="10.0" prefHeight="17.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="17.0" minHeight="10.0" prefHeight="17.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="17.0" minHeight="10.0" prefHeight="17.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="17.0" minHeight="10.0" prefHeight="17.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="17.0" minHeight="10.0" prefHeight="17.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="17.0" minHeight="10.0" prefHeight="17.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="17.0" minHeight="10.0" prefHeight="17.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="17.0" minHeight="10.0" prefHeight="17.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="17.0" minHeight="10.0" prefHeight="17.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="17.0" minHeight="10.0" prefHeight="17.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="17.0" minHeight="10.0" prefHeight="17.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="17.0" minHeight="10.0" prefHeight="17.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="17.0" minHeight="10.0" prefHeight="17.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="18.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="18.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="18.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="18.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
+          </rowConstraints>
+        </GridPane>
+      </children>
+    </VBox>
+  </children>
+  <stylesheets>
+    <URL value="@travelpanel.css" />
+  </stylesheets>
+</AnchorPane>

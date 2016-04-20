@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="apponsaresmanagement.controllers.travels.EditTravelController">
+  <children>
+    <BorderPane fx:id="editBPnl" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <bottom>
+        <GridPane alignment="CENTER">
+          <children>
+            <Button fx:id="editBtn" mnemonicParsing="false" onAction="#editTravel" text="Editar" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+          </children>
+          <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          </rowConstraints>
+        </GridPane>
+      </bottom>
+      <top>
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+          <children>
+            <Label id="titleLbl" text="Editar viaje:">
+              <font>
+                <Font name="Comic Sans MS Bold" size="18.0" />
+              </font>
+            </Label>
+            <Label fx:id="albaranLbl" text="">
+              <font>
+                <Font name="Comic Sans MS" size="18.0" />
+              </font>
+            </Label>
+          </children>
+        </HBox>
+      </top>
+    </BorderPane>
+  </children>
+  <stylesheets>
+    <URL value="@edittravel.css" />
+  </stylesheets>
+</AnchorPane>

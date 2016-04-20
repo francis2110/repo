@@ -1,0 +1,14 @@
+.map{
+    -fx-background-color: #666970;
+}
+.map-toolbar .button, .map-toolbar .toggle-button, .map-toolbar .label {
+    -fx-text-fill: white;
+    -fx-background-radius: 0;
+}
+#AnchorPane{  -fx-background-color: #808080;}
+.button, .toggle-button{
+    -fx-text-fill: white;
+    -fx-background-radius: 0;
+    -fx-background-color: #666970;
+
+}

@@ -1,0 +1,15 @@
+/* 
+    Document   : validatorCss
+    Created on : 25-jul-2013, 11:43:00
+    Author     : carmen
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+.red-focused-class {
+    -fx-background-color: red
+}
+

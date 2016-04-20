@@ -1,0 +1,14 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     tools:context=".MainActivity" android:background="@color/black">
+<ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:nestedScrollingEnabled="true">
+    <TextView android:id="@+id/receivedTxt" android:text="@string/serverTag" android:layout_width="fill_parent"
+        android:layout_height="wrap_content" android:background="@color/black" android:textColor="@color/white"
+            android:nestedScrollingEnabled="true" />
+</ScrollView>
+
+</RelativeLayout>

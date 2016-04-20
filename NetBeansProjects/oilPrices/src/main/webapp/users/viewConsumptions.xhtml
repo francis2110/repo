@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:ezcomp="http://xmlns.jcp.org/jsf/composite/ezcomp"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <body>
+
+        <ui:composition template="./../index.xhtml">
+
+            <ui:define name="menu">
+                <h:form>
+                    <ezcomp:userMenu/>
+                </h:form>
+            </ui:define>
+
+            <ui:define name="title of page">
+                <h3> Consumos de coche:</h3>
+            </ui:define>
+
+            <ui:define name="content">
+                <h:form id="form">
+                    <p:panelGrid columns="4" style="font-size: 0.8em">
+                        <p:outputLabel for="carCb " value="Coche:"/>
+                        <p:selectOneMenu id="carCb" value="#{consumptionsBean.car}">
+                            <f:selectItems value="#{fillUpBean.carsLstCb}"/>
+                        </p:selectOneMenu>
+                        <p:message id="carCbMssg" for="carCb"/>
+                        <p:commandButton id="consumptionBttn" value="ver consumo" action="#{consumptionsBean.viewCarConsumption()}"  update=":form:consumptionsPnl"/>
+                    </p:panelGrid>
+                    
+                    <p:panel id="consumptionsPnl" visible="#{consumptionsBean.tableVisibility}" style="font-size: 0.8em">
+                        <p:dataTable var="consumptions" value="#{consumptionsBean.carsTblLst}">
+                            <f:facet name="header"> 
+                                <p:outputLabel value="Consumos del vehículo seleccionado:"/>
+                            </f:facet>
+                            <p:column headerText="Modelo: "><p:outputLabel value="#{consumptions.cars.carModel}"/></p:column>
+                            <p:column headerText="fecha repostaje:"> <h:outputText value="#{consumptions.refuelingDate}"><f:convertDateTime pattern="dd/MM/yyyy"/> </h:outputText></p:column>
+                            <p:column headerText="Consumo (l/100 km::"><p:outputLabel value="#{consumptions.consumption}"/></p:column>
+                        </p:dataTable>
+                    </p:panel>
+                    <p:chart type="line" model="#{consumptions.}"
+                </h:form>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>
